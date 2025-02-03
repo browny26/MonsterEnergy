@@ -1,0 +1,457 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* classic colors */
+  --classic-background-color: rgb(27, 27, 27);
+  --classic-decoration-color: rgba(68, 68, 68, 0.2);
+  --classic-primary: rgb(255, 255, 255);
+  --classic-secondary: rgba(68, 68, 68, 0.6);
+  --classic-content: rgb(255, 255, 255, 0.6);
+  --classic-background-info: rgba(27, 27, 27, 0.9);
+  --classic-decoration-color-info: rgba(68, 68, 68, 0.6);
+
+  /* ultra colors */
+  --ultra-background-color: rgb(235, 235, 235);
+  --ultra-decoration-color: rgba(255, 255, 255, 0.2);
+  --ultra-primary: rgb(68, 68, 68);
+  --ultra-secondary: rgb(208, 208, 208);
+  --ultra-content: rgba(0, 0, 0, 0.6);
+  --ultra-background-color-info: rgba(235, 235, 235, 0.9);
+  --ultra-decoration-color-info: rgba(255, 255, 255, 0.6);
+
+  /* juice colors */
+  --juice-background-color: rgb(243, 133, 150);
+  --juice-decoration-color: rgba(255, 255, 255, 0.2);
+  --juice-primary: rgb(184, 63, 75);
+  --juice-secondary: rgb(248, 108, 129);
+  --juice-content: rgb(255, 255, 255);
+  --juice-background-color-info: rgba(243, 133, 150, 0.9);
+  --juice-decoration-color-info: rgba(255, 255, 255, 0.6);
+
+  /* mangoLoco colors */
+  --mangoLoco-background-color: rgb(34, 166, 221);
+  --mangoLoco-decoration-color: rgba(255, 255, 255, 0.2);
+  --mangoLoco-primary: rgb(6, 111, 155);
+  --mangoLoco-secondary: rgb(10, 152, 212);
+  --mangoLoco-content: rgb(255, 255, 255);
+  --mangoLoco-background-color-info: rgba(34, 166, 221, 0.9);
+  --mangoLoco-decoration-color-info: rgba(255, 255, 255, 0.6);
+
+  /* doctor colors */
+  --doctor-background-color: rgb(218, 166, 3);
+  --doctor-decoration-color: rgba(255, 255, 255, 0.2);
+  --doctor-primary: rgb(123, 94, 4);
+  --doctor-secondary: rgb(202, 154, 2);
+  --doctor-content: rgb(255, 255, 255);
+  --doctor-background-color-info: rgba(218, 166, 3, 0.9);
+  --doctor-decoration-color-info: rgba(255, 255, 255, 0.6);
+
+  --white: #ffffff;
+  --f-size-h1: 128px;
+  --f-size-h1-info: 85px;
+  --f-size-h2: 96px;
+  --f-size-h2-info: 55px;
+  --f-size-h3: 36px;
+  --f-size-p: 14px;
+  --f-weight-black: 900;
+  --padding-lr: 70px;
+  --padding-lr-info: 220px;
+}
+
+html {
+  /* scroll-behavior: smooth; */
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  color: var(--white);
+}
+
+li,
+a,
+span {
+  color: var(--white);
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.home {
+  background-color: var(--classic-background-color);
+  height: 100vh;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px var(--padding-lr);
+  color: white;
+}
+
+.nav-btn {
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 5px 30px;
+  text-transform: uppercase;
+  font-size: var(--f-size-p);
+  align-items: center;
+}
+
+.nav-btn:hover {
+  color: #1b1b1b;
+  background-color: white;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 80px; */
+  padding: 70px var(--padding-lr);
+}
+
+.header-top {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.header-top i {
+  /* font-size: 20px; */
+  color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 0 20px;
+  width: fit-content;
+  z-index: 1;
+}
+
+.header-top i:hover {
+  /* font-size: 20px; */
+  color: #1b1b1b;
+  background-color: white;
+  cursor: pointer;
+}
+
+.header-title {
+  position: relative;
+  display: grid;
+  width: 100%;
+  font-weight: var(--f-weight-black);
+  justify-content: center;
+}
+
+.header-title h1 {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: -108%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--classic-secondary);
+  font-size: var(--f-size-h1);
+}
+
+.header-title h2 {
+  font-size: var(--f-size-h2);
+  text-align: center;
+  z-index: 2;
+  line-height: 0.7;
+  color: var(--classic-primary);
+}
+
+.header-content {
+  width: 50%;
+  font-size: var(--f-size-p);
+  color: var(--classic-content);
+  margin-top: 10px;
+  text-align: center;
+}
+
+.decoration-column {
+  position: absolute;
+  background-color: var(--classic-decoration-color);
+  /* background-color: white; */
+  top: 0;
+  height: 100vh;
+  width: 277px;
+}
+
+.hero {
+  color: white;
+  margin-top: 100px;
+  position: relative;
+  padding: 40px var(--padding-lr);
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-content {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 130px;
+}
+
+.hero-content-top {
+  margin-bottom: 20px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-name {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.hero-description {
+  color: var(--classic-content);
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+  align-items: flex-end;
+  gap: 70px;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-share {
+  display: flex;
+  gap: 10px;
+}
+
+/* @keyframes slideImg {
+  from {
+    top: 100px;
+    left: 30%;
+    height: 1400px;
+  }
+
+  50% {
+    height: 900px;
+  }
+
+  50% {
+    height: 700px;
+  }
+
+  80% {
+    height: 600px;
+  }
+
+  to {
+    top: 1800px;
+    left: 120%;
+    height: 500px;
+  }
+} */
+
+.page-img {
+  position: absolute;
+  /* height: 100%; */
+  /* scale: 2; */
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  /* background-color: red; */
+
+  animation: slideImg linear;
+  animation-timeline: view();
+  /* animation-range: entry 0 cover 90%; */
+}
+
+/* .soda {
+    background: url(/juicemonster.png),
+        url(/bottina-di-latta-metallica-da-vicino-removebg-preview.png);
+    background-size: auto 100%;
+    aspect-ratio: 2 / 6;
+    background-repeat: no-repeat;
+
+    width: 390px;
+    height: 100%;
+    background-blend-mode: multiply;
+    mask-image: url(/bottina-di-latta-metallica-da-vicino-removebg-preview.png);
+    mask-size: auto 100%;
+} */
+
+.information {
+  height: 100vh;
+  background-color: var(--classic-background-color);
+  position: relative;
+  color: white;
+}
+
+.information-header {
+  /* display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 80px; */
+  z-index: 2;
+  padding: 0 var(--padding-lr-info) 0 var(--padding-lr-info);
+  height: 100%;
+}
+
+.information-header-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 80px;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.information-header-title {
+  position: relative;
+  display: grid;
+  /* place-content: center; */
+  font-weight: var(--f-weight-black);
+}
+
+.information-header-title h1 {
+  position: absolute;
+  /* top: -55px;
+    right: 50vh; */
+  top: -36%;
+  color: var(--classic-secondary);
+  font-size: var(--f-size-h1-info);
+}
+
+.information-header-title h2 {
+  font-size: var(--f-size-h2-info);
+  z-index: 2;
+}
+
+.information-nutrition {
+  display: flex;
+  gap: 10px;
+}
+
+.information-item {
+  width: 200px;
+  height: 200px;
+  background-color: var(--classic-decoration-color);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.information-item span {
+  font-size: var(--f-size-h3);
+  font-weight: 700;
+}
+
+.information-header-content {
+  color: white;
+  margin-top: 50px;
+}
+
+.information-btn {
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 5px 30px;
+  text-transform: uppercase;
+  font-size: var(--f-size-p);
+  align-items: center;
+  width: fit-content;
+
+  margin-top: 20px;
+}
+
+.information-btn:hover {
+  color: #1b1b1b;
+  background-color: white;
+  cursor: pointer;
+}
